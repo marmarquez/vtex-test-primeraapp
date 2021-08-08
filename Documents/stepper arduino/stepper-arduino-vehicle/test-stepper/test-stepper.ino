@@ -1,6 +1,5 @@
 /*
-  Starting from ... 
-  
+  take it from 
   DroneBot Workshop 2019
   https://dronebotworkshop.com
 */
