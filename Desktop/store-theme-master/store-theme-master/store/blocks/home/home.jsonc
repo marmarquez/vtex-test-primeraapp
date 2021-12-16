@@ -1,0 +1,301 @@
+{
+  "store.home": {
+    "blocks": [
+      "list-context.image-list#slide",
+      "list-context.image-list#demo",
+      /* You can make references to blocks defined in other files.
+       * For example, `flex-layout.row#deals` is defined in the `deals.json` file. */
+      "__fold__.experimentalLazyAssets",
+      "flex-layout.row#deals",
+      "rich-text#shelf-title",
+      "flex-layout.row#shelf",
+      "info-card#home",
+      "rich-text#question",
+      "rich-text#link",
+      "newsletter",
+      "shelf#home",
+      "flex-layout.row#home",
+      "responsive-layout.desktop#home",
+      "responsive-layout.mobile#home",
+      "modal-trigger#cupon"
+    ]
+  },
+
+  "list-context.image-list#slide":{
+    "children":[
+      "slider-layout#home-images"
+    ],
+    "props":{
+      "height": 600,
+      "images": [
+        {
+          "image": "https://storecomponents.vteximg.com.br/arquivos/banner-principal.png",
+          "description": "primer banner"
+        },
+        {
+          "image": "https://storecomponents.vteximg.com.br/arquivos/banner-principal.png",
+          "description": "segundo banner"
+        },
+        {
+          "image": "https://storecomponents.vteximg.com.br/arquivos/banner-principal.png",
+          "description": "tercer banner"
+        }
+      ]
+    }
+  },
+
+  "slider-layout#home-images":{
+    "props":{
+      "itemsPerPage": {
+        "desktop": 2,
+        "phone": 1,
+        "tablet": 1
+      },
+      "infinite": true,
+      "showPaginationsDots": "desktopOnly"
+    }
+  },
+
+  "responsive-layout.desktop#home":{
+    "children":["rich-text#desktop","image#desktop"]
+  },
+
+  "responsive-layout.mobile#home":{
+    "children":["rich-text#mobile","image#mobile"]
+  },
+
+  "rich-text#desktop":{
+    "props":{
+      "text": "# Tu cafe a tu manera \n ### Nueva Coleccion de cafeteras",
+      "textPosition": "LEFT",
+      "textAlignment": "LEFT",
+      "marginLeft": 10,
+      "blockClass": "textHome"
+    }
+  },
+
+  "rich-text#mobile":{
+    "props":{
+      "text": "### Tu cafe a tu manera \n ### Nueva Coleccion de cafeteras",
+      "textPosition": "CENTER",
+      "textAlignment": "CENTER"
+    }
+  },
+
+  "image#desktop":{
+    "props":{
+      "src": "https://appliancetheme.vteximg.com.br/arquivos/Responsive-Image-Desktop.jpg?q=1",
+      "link":{
+        "url": "/small-appliances/coffee-makers"
+      },
+      "alt": "coffe makers collection",
+      "maxWidth": "100%"
+    }
+  },
+
+  "image#mobile":{
+    "props":{
+      "src": "https://appliancetheme.vteximg.com.br/arquivos/Responsive-Image-Mobile.jpg?q=1",
+      "link":{
+        "url": "/small-appliances/coffee-makers"
+      },
+      "alt": "coffe makers collection",
+      "maxWidth": "100%"
+    }
+  },
+
+  "modal-trigger#cupon":{
+    "children":[
+      "rich-text#cupon",
+      "modal-layout#cupon"
+    ]
+  },
+  "rich-text#cupon":{
+    "props": {
+      "text": "ver cupon",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "font": "t-heading-3",
+      "color": "c-on-emphasis",
+      "blockClass": "cupon"
+    }
+  },
+  "modal-layout#cupon":{
+    "children":[
+      "rich-text#modal-content"
+    ]
+  },
+  "rich-text#modal-content":{
+    "props":{
+      "text": "Cupon #1",
+      "font": "t-heading-4",
+      "color": "c-on-emphasis",
+      "blockClass": "modal"
+    }
+  },
+
+  "shelf#home":{
+    "blocks":["product-summary.shelf"],
+    "props":{
+      "paginationDotVisibility": "desktopOnly",
+      "productList": {
+        "maxItems": 10,
+        "itemsPerPage": 3,
+        "scroll": "BY_PAGE",
+        "arrows": "true",
+        "titleText": "Mas vendidos"
+      }
+    }
+  },
+
+  "flex-layout.row#home":{
+    "children":[
+      "info-card#col-left",
+      "flex-layout.col#col-right"
+    ]
+  },
+
+  "info-card#col-left":{
+    "props":{
+      "id": "InfoCards",
+      "imageUrl": "../assets/imac.jpg",
+      "isFullModeStyle": true,
+      "headline": "imac",
+      "subhead": "todo en uno",
+      "callToActionText": "mas info",
+      "callToActionUrl": "#",
+      "textPosition": "center",
+      "textAlignment": "center",
+      "callToActionMode": "link",
+      "blockClass": "infoMacBook"
+
+    }
+  },
+
+  "flex-layout.col#col-right":{
+    "children":[
+      "info-card#col-left-2",
+      "info-card#col-right-2"
+    ]
+  },
+
+  "info-card#col-left-2":{
+    "props":{
+      "id": "InfoCards2",
+      "imageUrl": "https://storecomponents.vteximg.com.br/arquivos/box.png",
+      "isFullModeStyle": false,
+      "headline": "Hola",
+      "subhead": "todo en uno",
+      "callToActionText": "mas info",
+      "callToActionUrl": "#",
+      "textPosition": "center",
+      "textAlignment": "center",
+      "callToActionMode": "link",
+      "blockClass": "infoMacBook"
+    }
+  },
+
+  "info-card#col-right-2":{
+    "props":{
+      "id": "InfoCards3",
+      "imageUrl": "https://storecomponents.vteximg.com.br/arquivos/box.png",
+      "isFullModeStyle": false,
+      "headline": "imac",
+      "subhead": "todo en uno",
+      "callToActionText": "mas info",
+      "callToActionUrl": "#",
+      "textPosition": "center",
+      "textAlignment": "center",
+      "callToActionMode": "link",
+      "blockClass": "infoMacBook"
+
+    }
+  },
+
+
+  "list-context.image-list#demo": {
+    "children": ["slider-layout#demo-images"],
+    "props": {
+      "height": 720,
+      "images": [
+        {
+          "image": "https://storecomponents.vteximg.com.br/arquivos/banner-principal.png",
+          "mobileImage": "https://storecomponents.vteximg.com.br/arquivos/banner-principal-mobile.jpg"
+        },
+        {
+          "image": "https://storecomponents.vteximg.com.br/arquivos/banner.jpg",
+          "mobileImage": "https://storecomponents.vteximg.com.br/arquivos/banner-principal-mobile.jpg"
+        }
+      ]
+    }
+  },
+  "slider-layout#demo-images": {
+    "props": {
+      "itemsPerPage": {
+        "desktop": 1,
+        "tablet": 1,
+        "phone": 1
+      },
+      "infinite": true,
+      "showNavigationArrows": "desktopOnly",
+      "blockClass": "carousel"
+    }
+  },
+
+  "rich-text#shelf-title": {
+    "props": {
+      "text": "## Summer",
+      "blockClass": "shelfTitle"
+    }
+  },
+  "flex-layout.row#shelf": {
+    "children": ["list-context.product-list#demo1"]
+  },
+  "list-context.product-list#demo1": {
+    "blocks": ["product-summary.shelf"],
+    "children": ["slider-layout#demo-products"],
+    "props": {
+      "orderBy": "OrderByTopSaleDESC"
+    }
+  },
+  "slider-layout#demo-products": {
+    "props": {
+      "itemsPerPage": {
+        "desktop": 5,
+        "tablet": 3,
+        "phone": 1
+      },
+      "infinite": true,
+      "fullWidth": false,
+      "blockClass": "shelf"
+    }
+  },
+
+  "info-card#home": {
+    "props": {
+      "id": "info-card-home",
+      "isFullModeStyle": false,
+      "textPosition": "left",
+      "imageUrl": "https://storecomponents.vteximg.com.br/arquivos/banner-infocard2.png",
+      "headline": "Clearance Sale",
+      "callToActionText": "DISCOVER",
+      "callToActionUrl": "/sale/d",
+      "blockClass": "info-card-home",
+      "textAlignment": "center"
+    }
+  },
+
+  "rich-text#question": {
+    "props": {
+      "text": "**This is an example store built using the VTEX platform.\nWant to know more?**",
+      "blockClass": "question"
+    }
+  },
+
+  "rich-text#link": {
+    "props": {
+      "text": "\n**Reach us at**\nwww.vtex.com.br",
+      "blockClass": "link"
+    }
+  }
+}
